@@ -28,6 +28,11 @@ export default class Category extends Component{
     {
         this.props.navigation.navigate('clubHomeScreen')
     };
+
+    onClickPromoter = () =>
+    {
+        this.props.navigation.navigate('eventHomeScreen')
+    };
   
 
     render()
@@ -65,6 +70,9 @@ export default class Category extends Component{
 
      </TouchableOpacity>
 
+     <TouchableOpacity activeOpacity = {.5} 
+                        onPress={this.onClickPromoter}>
+
          <ImageBackground source={require('./images/big_button.png')}
                style={{height:85,width:85,alignItems:'center',justifyContent:'center'}}>
 
@@ -72,6 +80,8 @@ export default class Category extends Component{
          <Text style={{color:'#ffffff',fontSize:14,fontWeight:'bold',alignSelf:'center'}}>PROMOTER</Text>
 
           </ImageBackground>
+
+      </TouchableOpacity>
 
       <TouchableOpacity activeOpacity = {.5} 
                         onPress={this.onClickClub}>

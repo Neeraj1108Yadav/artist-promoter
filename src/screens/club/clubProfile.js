@@ -23,7 +23,7 @@ export default class clubProfile extends Component{
         clubName:'',
         atmosphere:'',
         location:'',
-        contactNumber:''
+        contactNumber:'',
       };
   }
 
@@ -36,6 +36,7 @@ export default class clubProfile extends Component{
   {
     this.setState({editProfile:visible});
   }
+
 
     render()
     {
@@ -332,7 +333,7 @@ export default class clubProfile extends Component{
                           style={{width:"40%",
                           borderRadius:20,
                           marginHorizontal:10,  
-                          marginVertical:5,      
+                          marginVertical:10,      
                           alignItems:'center',
                           justifyContent:'center'}}>
 
@@ -351,15 +352,10 @@ export default class clubProfile extends Component{
           </LinearGradient>
          
            <View style={{
-             marginBottom:10,
              marginHorizontal:10,
              flexDirection:'row',
              justifyContent:'center',
-             position:'relative',
-             top:"25%",
-             bottom:0,
-             left:0,
-             right:0}}>
+             marginTop:25}}>
 
             <LinearGradient colors={['#FF41A8','#FFB847']}
                             flexBasis="40%" 
@@ -378,7 +374,7 @@ export default class clubProfile extends Component{
                             justifyContent:'center',
                             alignItems:'center'}}
                                  
-            onPress = {this.functionAlert}>
+            onPress = {() => {this.editProfileFunction(false)}}>
       
             <Text style={{color:'#ffffff',fontSize:15}}>BACK</Text>
          
@@ -404,7 +400,7 @@ export default class clubProfile extends Component{
                             justifyContent:'center',
                             alignItems:'center'}}
                                  
-          onPress = {() => {this.clubSubmitDone(true)}}>
+          onPress = {() => {this.props.navigation.navigate('clubProfile')}}>
       
           <Text style={{color:'#ffffff',fontSize:15}}>SUBMIT</Text>
          

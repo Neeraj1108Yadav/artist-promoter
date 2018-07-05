@@ -50,11 +50,12 @@ import { width, height} from 'react-native-dimension';
               
               <Text style={styles.textBlack}>CATEGORIES</Text>
 
-              <Text style={styles.textWhite}>Create Events</Text>
+              <Text style={styles.textWhite}
+               onPress={this.navigateToScreen('addEventScreen')}>Create Events</Text>
               <View style={styles.blackLine}/>
 
-              <Text style={styles.textWhite}>Create Geo-Filtes</Text>
-              <View style={styles.blackLine}/>
+              {/* <Text style={styles.textWhite}>Create Geo-Filtes</Text>
+              <View style={styles.blackLine}/> */}
 
               <Text style={styles.textWhite}>Create Moment-Filters</Text>
               <View style={styles.blackLine}/>

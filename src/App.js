@@ -184,7 +184,7 @@ const RootStack = StackNavigator({
    },
   },
   {
-    initialRouteName: 'eventHomeScreen',
+    initialRouteName: 'LoginScreen',
   }
 );
 

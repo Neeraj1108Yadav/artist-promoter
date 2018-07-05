@@ -282,7 +282,7 @@ export default class clubAdd extends Component{
                             justifyContent:'center',
                             alignItems:'center'}}
                                  
-            onPress = {this.functionAlert}>
+            onPress = {() => {this.addClubFunction(false)}}>
       
             <Text style={{color:'#ffffff',fontSize:15}}>BACK</Text>
          
@@ -334,7 +334,7 @@ export default class clubAdd extends Component{
             alert('Modal has been closed.');
           }}>
 
-         <View style={{height:"28%",
+         <View style={{height:"35%",
                      width:"70%",
                      flexDirection:'column',
                      backgroundColor:'#000000',
@@ -365,7 +365,7 @@ export default class clubAdd extends Component{
                           style={{width:"50%",
                           borderRadius:20,
                           marginHorizontal:10, 
-                          marginTop:15,     
+                          marginTop:20,     
                           alignItems:'center',
                           alignSelf:'center',
                           justifyContent:'center'}}>
@@ -376,7 +376,7 @@ export default class clubAdd extends Component{
                             justifyContent:'center',
                             alignItems:'center'}}
                                  
-          onPress = {() => {this.props.navigation.navigate('eventHomeScreen')}}>
+          onPress = {() => {this.clubSubmitDone(false)}}>
       
           <Text style={{color:'#ffffff',fontSize:15}}>DONE</Text>
          

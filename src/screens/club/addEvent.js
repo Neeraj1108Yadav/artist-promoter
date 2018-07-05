@@ -370,7 +370,7 @@ export default class addEvent extends Component{
                             justifyContent:'center',
                             alignItems:'center'}}
                                  
-          onPress = {this.functionAlert}>
+          onPress = {() => {this.evenCreationDone(false)}}>
       
           <Text style={{color:'#ffffff',fontSize:15}}>DONE</Text>
          
