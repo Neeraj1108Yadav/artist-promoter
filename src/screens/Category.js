@@ -46,7 +46,8 @@ export default class Category extends Component{
 
          <View style={{alignItems:'center',justifyContent:'center',marginTop:10}}>
           <Image source={require('./images/logo.png')}
-                 style={{height:140,width:140}}/>
+                 style={{height:140,width:140}}
+                 resizeMode={"contain"}/>
          </View>
 
          <Text style={{color:'#ffffff',fontSize:15,alignSelf:'center',marginTop:20}}>Which user type do you belong to</Text>

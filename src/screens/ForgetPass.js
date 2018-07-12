@@ -35,7 +35,8 @@ export default class ForgetPass extends Component {
                <View style={{height:40,width:null}}/>
                 <View style={{alignItems:'center',justifyContent:'center',marginTop:30}}>
                     <Image source={require('./images/logo.png')}
-                           style={{height:180,width:180}}/>
+                           style={{height:180,width:180}}
+                           resizeMode={"contain"}/>
                 </View>
 
                 <View style = {{flexDirection:'column',alignItems:'center',marginTop:50,flex:1}}>

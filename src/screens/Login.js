@@ -6,6 +6,7 @@ import {StyleSheet,
         Alert,
         TextInput,
         Image,
+        TouchableOpacity,
         TouchableHighlight,
         ScrollView} from 'react-native';
 import {StackNavigator} from 'react-navigation';
@@ -40,7 +41,8 @@ export default class Login extends Component{
                               width:'100%',
                               backgroundColor:'transparent'}}>
                     <Image source={require('./images/logo.png')}
-                           style={{height:150,width:150}}/>
+                           style={{height:150,width:150}}
+                           resizeMode={"contain"}/>
                 </View>
 
             <ScrollView>
@@ -71,6 +73,7 @@ export default class Login extends Component{
                      secureTextEntry={true}/>
                 </View>
 
+          <TouchableOpacity>
              <LinearGradient colors={['#FF41A8','#FFB847']} style={{marginTop:10,
                                                                     height:45,
                                                                     width:250,
@@ -85,6 +88,8 @@ export default class Login extends Component{
                
               </TouchableHighlight>
             </LinearGradient>
+
+          </TouchableOpacity>
 
             <Text style={{color:'#ffffff',
                          fontSize:15,
