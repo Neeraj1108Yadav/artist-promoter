@@ -34,7 +34,7 @@ export default class Login extends Component{
            <View style={{flex:1,flexDirection:'column'}}>
               <ImageBackground style ={{height:null,width:null,flex:1}}
                source={require('./images/bg.png')}>
-               <View style={{height:30,width:null}}/>
+               {/* <View style={{height:30,width:null}}/> */}
                 <View style={{alignItems:'center',
                               justifyContent:'center',
                               marginTop:30,
@@ -46,7 +46,7 @@ export default class Login extends Component{
                 </View>
 
             <ScrollView>
-                <View style = {{flexDirection:'column',alignItems:'center',marginTop:10}}>
+                <View style = {{flexDirection:'column',alignItems:'center',marginTop:30}}>
 
                 <View style={styles.capsule}>
                 <Image source={require('./images/user.png')}

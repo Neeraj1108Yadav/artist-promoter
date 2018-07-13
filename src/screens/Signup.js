@@ -10,7 +10,6 @@ import {StyleSheet,
         TouchableOpacity,
         ScrollView,
         ToastAndroid} from 'react-native';
-import {StackNavigator} from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
 
 let emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -132,15 +131,16 @@ export default class Signup extends Component{
         <View style={{flex:1,flexDirection:'column'}}>
            <ImageBackground style ={{height:null,width:null,flex:1}}
                source={require('./images/bg.png')}>
-               <View style={{height:40,width:null}}/>
-                <View style={{alignItems:'center',justifyContent:'center',marginTop:30}}>
+
+            <ScrollView>
+             <View style={{alignItems:'center',justifyContent:'center',marginTop:30}}>
                     <Image source={require('./images/logo.png')}
-                           style={{height:180,width:180}}
+                           style={{height:150,width:150}}
                            resizeMode={"contain"}/>
                 </View>
 
-             <ScrollView>
-                <View style = {{flexDirection:'column',alignItems:'center',marginTop:10}}>
+            
+                <View style = {{flexDirection:'column',alignItems:'center',marginTop:20}}>
 
 
                  <View style={styles.capsule}>
