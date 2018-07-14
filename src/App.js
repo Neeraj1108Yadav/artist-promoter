@@ -7,13 +7,13 @@
 import React, { Component } from 'react';
 import {Platform,StyleSheet,Text,View,Image,TouchableOpacity} from 'react-native';
 import {StackNavigator,DrawerNavigator,NavigationActions} from 'react-navigation';
-import Login from './screens/Login';
-import Signup from './screens/Signup';
-import ForgetPass from './screens/ForgetPass';
-import Category from './screens/Category';
-import SubCategory from './screens/SubCategory';
-import SubCategory_Two from './screens/SubCategory_Two';
-import Fb_Tweet from './screens/Fb_Tweet';
+import Login from './screens/Login/Login';
+import Signup from './screens/Register/Signup';
+import ForgetPass from './screens/ForgetPass/ForgetPass';
+import Category from './screens/Category/Category';
+import SubCategory from './screens/SubCategory/SubCategory';
+import SubCategory_Two from './screens/SubCategory/SubCategory_Two';
+import Fb_Tweet from './screens/SocialLogin/Fb_Tweet';
 import MainActivity from './screens/MainActivity';
 import HomeArtist from './screens/HomeArtist';
 import DiscoverArtist from './screens/DiscoverArtist';
@@ -94,27 +94,27 @@ const RootStack = StackNavigator({
      screen:MainActivity,
      navigationOptions:
      {
-      headerTintColor: '#000000',
-      headerStyle: {
-        height:56,
-        position: 'absolute',
-        backgroundColor: '#000000',
-        elevation:0,
-        zIndex: 100,
-        top: 0,
-        left: 0,
-        right: 0
-      },
-      headerTitle:(
-          <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',margin:15}}>
+       header:null
+      // headerTintColor: '#000000',
+      // headerStyle: {
+      //   height:56,
+      //   position: 'absolute',
+      //   backgroundColor: '#000000',
+      //   elevation:0,
+      //   zIndex: 100,
+      //   top: 0,
+      //   left: 0,
+      //   right: 0
+      }
+      // headerTitle:(
+      //     <View style={{flex:1,flexDirection:'row',justifyContent:'space-between',margin:15}}>
       
-          {/* <Image style={{ width: 24, height: 24}} source={require('./screens/images/menu.png')}/>  */}
-          <Text style={{fontSize:18,color:'#ffffff',fontWeight:'bold'}}> DATSPOT </Text>
-          <Image style={{ width: 24, height: 24}} source={require('./screens/images/notification.png')}/>
+      //     {/* <Image style={{ width: 24, height: 24}} source={require('./screens/images/menu.png')}/>  */}
+      //     <Text style={{fontSize:18,color:'#ffffff',fontWeight:'bold'}}> DATSPOT </Text>
+      //     <Image style={{ width: 24, height: 24}} source={require('./screens/images/notification.png')}/>
 
-          </View>
-      )
-    }
+      //     </View>
+      // )
    },
    ClubDetailScreen:
    {

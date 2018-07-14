@@ -10,7 +10,9 @@ import {StyleSheet,
         ScrollView} from 'react-native';
 import {StackNavigator} from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
-import { width, height, totalSize } from 'react-native-dimension';
+import Header from '../components/header/header';
+import Feather from 'react-native-vector-icons/Feather'
+import style from "../components/header/style";;
 import HomeFollowAll from './HomeFollowAll';
 
 
@@ -26,6 +28,26 @@ class FollowList extends Component{
  {
    return(
    <ScrollView style={{flex:1,backgroundColor:'#000000'}}>
+
+        {/* {(this.state.addNewPostPopUp===true)?<AddNewPost data={this.state.posts[0]}/>:null}
+        {(this.state.postDetailsPopUp===true)?<PostDetail data={this.state.posts[0]}/>:null} */}
+        <Header
+            // onPressLeftButton={ this.drawerToggle }
+            leftIcon={ () => <View style={style.headerIconContainer}>
+                <Feather
+                    name="menu"
+                    size={30}
+                    style={{color:"#ffffff"}}
+                />
+            </View>}
+            middleText={ "HOME" }
+            // onPressRightButton={ this.drawerToggle }
+            rightIcon={ () => <View style={style.headerIconContainer}>
+                <View style={style.notificationCountContainer}>
+                    <Text style={{color:"rgb(255,65,168)", fontSize:12}}>3</Text>
+                </View>
+                <Image resizeMode={"contain"} style={style.notificationIcon} source={require("./images/notification.png")}/>
+            </View> }/>
 
     <View style={{flex:1,flexDirection:'column',backgroundColor:'#000000',marginBottom:15}}>
      
@@ -154,9 +176,17 @@ const RootStack = StackNavigator({
 
   FollowHome: {
     screen: FollowList,
+    navigationOptions:
+     {
+       header:null
+     }
   },
   FollowAll: {
     screen: HomeFollowAll,
+    navigationOptions:
+     {
+       header:null
+     }
   }
 },
   {
