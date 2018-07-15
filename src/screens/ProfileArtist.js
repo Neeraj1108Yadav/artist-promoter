@@ -2,15 +2,14 @@ import React, { Component } from 'react';
 import {StyleSheet,
         View,
         Text,
-        ImageBackground,
         Alert,
-        TextInput,
         Image,
         TouchableHighlight,
         ScrollView} from 'react-native';
-import {StackNavigator} from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
 import { width, height, totalSize } from 'react-native-dimension';
+import Header from '../components/header/header';
+import Feather from 'react-native-vector-icons/Feather';
 
 export default class Profile extends Component {
 
@@ -23,7 +22,39 @@ export default class Profile extends Component {
       return(
 
       <ScrollView style={{flex:1,backgroundColor:'#000000'}}>
-        <View style={{flex:1,backgroundColor:'#000000',flexDirection:'column',marginTop:54,marginBottom:15}}>
+
+       <Header
+            // onPressLeftButton={ this.drawerToggle }
+            leftIcon={ () => <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+                <Feather
+                    name="menu"
+                    size={30}
+                    style={{color:"#ffffff",alignSelf:'center'}}
+                />
+            </View>}
+            middleText={ "PROFILE" }
+            // onPressRightButton={ this.drawerToggle }
+            rightIcon={ () => 
+            <View style={{flex:1,alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                <View style={{
+                  alignItems:'center',
+                  justifyContent:'center',
+                  position:"absolute",
+                  right:"20%",
+                  top:"20%",
+                  width:16,
+                  height:16,
+                  borderRadius:8,
+                  backgroundColor:"#000",
+                  zIndex:16,}}>
+                    <Text style={{color:"rgb(255,65,168)", fontSize:12}}>3</Text>
+                </View>
+                <Image resizeMode={"contain"} style={{alignItems:'center',justifyContent:'center'}} 
+                source={require("./images/notification.png")}/>
+            </View> }/>
+
+
+        <View style={{flex:1,backgroundColor:'#000000',flexDirection:'column',marginTop:5,marginBottom:15}}>
 
         <View style={{flexDirection:'row',
                       margin:10}}>

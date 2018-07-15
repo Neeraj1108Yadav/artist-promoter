@@ -12,7 +12,6 @@ import {StackNavigator} from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
 import Header from '../components/header/header';
 import Feather from 'react-native-vector-icons/Feather'
-import style from "../components/header/style";;
 import HomeFollowAll from './HomeFollowAll';
 
 
@@ -33,20 +32,32 @@ class FollowList extends Component{
         {(this.state.postDetailsPopUp===true)?<PostDetail data={this.state.posts[0]}/>:null} */}
         <Header
             // onPressLeftButton={ this.drawerToggle }
-            leftIcon={ () => <View style={style.headerIconContainer}>
+            leftIcon={ () => <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
                 <Feather
                     name="menu"
                     size={30}
-                    style={{color:"#ffffff"}}
+                    style={{color:"#ffffff",alignSelf:'center'}}
                 />
             </View>}
             middleText={ "HOME" }
             // onPressRightButton={ this.drawerToggle }
-            rightIcon={ () => <View style={style.headerIconContainer}>
-                <View style={style.notificationCountContainer}>
+            rightIcon={ () => 
+            <View style={{flex:1,alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                <View style={{
+                  alignItems:'center',
+                  justifyContent:'center',
+                  position:"absolute",
+                  right:"20%",
+                  top:"20%",
+                  width:16,
+                  height:16,
+                  borderRadius:8,
+                  backgroundColor:"#000",
+                  zIndex:16,}}>
                     <Text style={{color:"rgb(255,65,168)", fontSize:12}}>3</Text>
                 </View>
-                <Image resizeMode={"contain"} style={style.notificationIcon} source={require("./images/notification.png")}/>
+                <Image resizeMode={"contain"} style={{alignItems:'center',justifyContent:'center'}} 
+                source={require("./images/notification.png")}/>
             </View> }/>
 
     <View style={{flex:1,flexDirection:'column',backgroundColor:'#000000',marginBottom:15}}>

@@ -184,7 +184,7 @@ const RootStack = StackNavigator({
    },
   },
   {
-    initialRouteName: 'LoginScreen',
+    initialRouteName: 'MainScreen',
   }
 );
 

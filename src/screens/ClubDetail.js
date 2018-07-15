@@ -26,7 +26,8 @@ export default class ClubDetail extends Component{
    <ScrollView style={{flex:1,backgroundColor:'#000000'}}>
       <View style={{flex:1,backgroundColor:'#000000',flexDirection:'column'}}>
         <ImageBackground style={styles.clubImage}
-                        source={require('./images/d1.jpeg')}>
+                        source={require('./images/d1.jpeg')}
+                        resizeMode={'contain'}>
 
          <Image style={{marginHorizontal:5,marginVertical:5}}
                 source={require('./images/back.png')}/>
@@ -230,7 +231,7 @@ const styles = StyleSheet.create({
     clubImage:
     {
       height: height(40), // 40% of height device screen
-      width: null,
+      width: "100%",
       flexDirection:'row'
     },
     capsulText:

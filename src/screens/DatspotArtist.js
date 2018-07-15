@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import {StyleSheet,View,Text} from 'react-native';
 import {StackNavigator,TabNavigator,TabBarBottom} from 'react-navigation';
-import LinearGradient from 'react-native-linear-gradient';
 import UpcomingEvent from './UpcomingEvent';
 import EventsAttending from './EventsAttending';
 import EventsAttended from './EventsAttended';

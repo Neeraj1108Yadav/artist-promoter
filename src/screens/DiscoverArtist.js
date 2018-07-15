@@ -8,10 +8,10 @@ import {StyleSheet,
         Image,
         TouchableHighlight,
         ScrollView} from 'react-native';
-import {StackNavigator} from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
 import { width, height, totalSize } from 'react-native-dimension';
-import Dialog from "react-native-dialog";
+import Header from '../components/header/header';
+import Feather from 'react-native-vector-icons/Feather';
 
 export default class Direction extends Component {
 
@@ -38,25 +38,54 @@ export default class Direction extends Component {
 
     <ScrollView style={{flex:1,backgroundColor:'#000000'}}>
 
+     <Header
+            // onPressLeftButton={ this.drawerToggle }
+            leftIcon={ () => <View style={{flex:1,alignItems:'center',justifyContent:'center'}}>
+                <Feather
+                    name="menu"
+                    size={30}
+                    style={{color:"#ffffff",alignSelf:'center'}}
+                />
+            </View>}
+            middleText={ "DISCOVER" }
+            // onPressRightButton={ this.drawerToggle }
+            rightIcon={ () => 
+            <View style={{flex:1,alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+                <View style={{
+                  alignItems:'center',
+                  justifyContent:'center',
+                  position:"absolute",
+                  right:"20%",
+                  top:"20%",
+                  width:16,
+                  height:16,
+                  borderRadius:8,
+                  backgroundColor:"#000",
+                  zIndex:16,}}>
+                    <Text style={{color:"rgb(255,65,168)", fontSize:12}}>3</Text>
+                </View>
+                <Image resizeMode={"contain"} style={{alignItems:'center',justifyContent:'center'}} 
+                source={require("./images/notification.png")}/>
+            </View> }/>
+
       <View style={{flex:1,backgroundColor:'#000000',flexDirection:'column'}}>
 
-       <View style={{flexDirection:'row',marginHorizontal:15,marginTop:54}}>
+       <View style={{flexDirection:'row',marginHorizontal:15,marginTop:5}}>
         
-       <View style={{flexDirection:'row'}}
-       flexBasis="70%">
+       <View style={{flexDirection:'row'}}>
 
         <Text style={styles.textClubDescription}>Lorem Ipsum is simply dummy text of the printing and 
         typesetting industry. </Text>
 
          </View>
         
-        <View style={{justifyContent:'flex-end',flexDirection:'row'}}
+        {/* <View style={{justifyContent:'flex-end',flexDirection:'row'}}
               flexBasis="30%">
 
         <Image style={{margin:5}}
         source={require('./images/map.png')}/>
 
-        </View>
+        </View> */}
       
        </View>
 
@@ -194,7 +223,7 @@ const styles = StyleSheet.create({
   {
       color:'#ffffff',
       fontSize:14,
-      marginRight:5
+      marginHorizontal:5
   },
   imageSize:
   {
